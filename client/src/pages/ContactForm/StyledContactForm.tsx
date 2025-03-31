@@ -35,4 +35,12 @@ export const Content = styled.div`
   flex: 1;
   align-items: center;
   padding: 20px;
+  background-color: #f5f5f5;
+  margin-bottom: 40px;
+    
+    p {
+        font-size: 64px;
+        text-align: center;
+        font-weight: bold;
+    }
 `;

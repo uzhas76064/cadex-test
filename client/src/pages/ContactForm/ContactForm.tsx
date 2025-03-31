@@ -1,11 +1,16 @@
-import {StyledContactForm, StyledForm, StyledTitle, StyledWrapper, SubmitButton} from "./StyledContactForm.tsx";
+import {
+    Content,
+    StyledContactForm,
+    StyledForm,
+    StyledTitle,
+    StyledWrapper,
+    SubmitButton
+} from "./StyledContactForm.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import Header from "../../components/Header/Header.tsx";
 import {Form, Input, message} from "antd";
 import {useState} from "react";
 import {apiURL} from "../../const.ts";
-import {useNavigate} from "react-router";
-import {Content} from "antd/es/layout/layout";
 
 interface ContactFormValues {
     name: string;
@@ -13,11 +18,9 @@ interface ContactFormValues {
     message: string;
 }
 
-
-
 const ContactForm = () => {
     const [responseMessage, setResponseMessage] = useState("");
-    const navigate = useNavigate();
+    const [isFormSent, setIsFormSent] = useState(false);
 
     const [form] = Form.useForm<ContactFormValues>();
 
@@ -32,8 +35,8 @@ const ContactForm = () => {
             if (res.ok) {
                 setResponseMessage(`Thank you for your interest, ${values.name}`);
                 message.success("Форма успешно отправлена!");
+                setIsFormSent((prevState) => !prevState);
                 form.resetFields();
-                navigate(`/success-contact?name=${responseMessage}`);
             } else {
                 message.error("Ошибка при отправке формы.");
             }
@@ -46,7 +49,7 @@ const ContactForm = () => {
         <StyledWrapper>
             <Header />
             <Content>
-                <StyledContactForm>
+                {!isFormSent ? <StyledContactForm>
                     <StyledTitle level={1}>Only CTA on the page</StyledTitle>
 
                     {responseMessage ? (
@@ -65,7 +68,7 @@ const ContactForm = () => {
                             <SubmitButton type="primary" htmlType="submit">Submit</SubmitButton>
                         </StyledForm>
                     )}
-                </StyledContactForm>
+                </StyledContactForm>: <p>{responseMessage}</p>}
             </Content>
             <Footer />
         </StyledWrapper>
