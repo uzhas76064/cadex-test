@@ -10,8 +10,8 @@ function App() {
   return (
    <Routes>
        <Route index path="/" element={<Main />}/>
-       <Route path={"/login"} element={<ContactForm />}/>
-       <Route path={"/success-authorized"} element={
+       <Route path={"/contact-us"} element={<ContactForm />}/>
+       <Route path={"/success-contact"} element={
            <PrivateRoute isAuthorized={isAuthorized}>
                <ContactSuccess />
            </PrivateRoute>
