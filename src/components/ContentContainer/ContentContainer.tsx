@@ -1,11 +1,11 @@
 import {Button, Typography} from "antd";
-import ProductsList, {ProductsListProps} from "../ProductsList/ProductsList.tsx";
-import {StyledProductsContainer} from "./StyledProductsContainer.tsx";
+import ContentList, {ProductsListProps} from "../ContentList/ContentList.tsx";
+import {StyledContentContainer} from "./StyledContentContainer.tsx";
 import {useNavigate} from "react-router";
 
 type ProductsContainerProps = ProductsListProps;
 
-const ProductsContainer = ({content}: ProductsContainerProps) => {
+const ContentContainer = ({content}: ProductsContainerProps) => {
     const navigate = useNavigate();
 
     const handleContactBtnClick = () => {
@@ -13,12 +13,12 @@ const ProductsContainer = ({content}: ProductsContainerProps) => {
     }
 
     return (
-        <StyledProductsContainer>
+        <StyledContentContainer>
             <Typography.Title level={2}>Also very important title</Typography.Title>
-            <ProductsList content={content} />
+            <ContentList content={content} />
             <Button onClick={handleContactBtnClick} type={"primary"}>Contact Us</Button>
-        </StyledProductsContainer>
+        </StyledContentContainer>
     )
 }
 
-export default ProductsContainer;
+export default ContentContainer;

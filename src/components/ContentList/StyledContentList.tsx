@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledProductList = styled.ul`
+export const StyledContentList = styled.ul`
     display: grid;
     grid-template-columns: repeat(3 ,1fr);
     text-align: left;

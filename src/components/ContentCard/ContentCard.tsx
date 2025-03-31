@@ -1,18 +1,18 @@
 import {Typography} from "antd";
-import {StyledProductCard} from "./StyledProductCard.tsx";
+import {StyledContentCard} from "./StyledContentCard.tsx";
 
 type ProductCardProps = {
     title: string,
     text: string,
 }
 
-const ProductCard = ({title, text}: ProductCardProps) => {
+const ContentCard = ({title, text}: ProductCardProps) => {
     return (
-        <StyledProductCard>
+        <StyledContentCard>
             <Typography.Title level={3}>{title}</Typography.Title>
             <Typography.Text>{text}</Typography.Text>
-        </StyledProductCard>
+        </StyledContentCard>
     )
 }
 
-export default ProductCard;
+export default ContentCard;
