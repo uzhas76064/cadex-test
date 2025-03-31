@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-"scripts": {
+  "scripts": {
     "build": "../node_modules/.bin/tsc",
     "start": "ts-node server.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "^11.1.0"
+  },
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.14",
