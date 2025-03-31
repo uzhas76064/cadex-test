@@ -3,8 +3,7 @@ import Main from "../../pages/Main/Main.tsx";
 import ContactForm from "../../pages/ContactForm/ContactForm.tsx";
 import PrivateRoute from "../PrivateRoute/PrivateRoute.tsx";
 import ContactSuccess from "../../pages/ContactSuccess/ContactSuccess.tsx";
-
-const isSuccess = false;
+import {isSuccess} from "../../const.ts";
 
 function App() {
   return (

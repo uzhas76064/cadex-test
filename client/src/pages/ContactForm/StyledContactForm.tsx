@@ -24,3 +24,15 @@ export const StyledTitle = styled(Typography.Title)`
     text-align: center;
     padding: 20px;
 `
+
+export const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+export const Content = styled.div`
+  flex: 1;
+  align-items: center;
+  padding: 20px;
+`;
