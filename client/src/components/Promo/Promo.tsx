@@ -1,5 +1,5 @@
 import {Typography} from "antd";
-import {StyledPromo} from "./StyledPromo.tsx";
+import {StyledIframe, StyledPromo} from "./StyledPromo.tsx";
 import {promoVideoUrl} from "../../const.ts";
 
 const Promo = () => {
@@ -14,11 +14,11 @@ const Promo = () => {
                     ultricies, sem urna convallis metus, vel suscipit nibh lacus tincidunt ante
                 </Typography.Text>
             </div>
-            <iframe width="500px" height="250px" src={`${promoVideoUrl}`}
+            <StyledIframe width="500px" height="250px" src={`${promoVideoUrl}`}
                     title="Rick Astley - Never Gonna Give You Up (Official Music Video)" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen></iframe>
+                    allowFullScreen></StyledIframe>
         </StyledPromo>
     )
 }
