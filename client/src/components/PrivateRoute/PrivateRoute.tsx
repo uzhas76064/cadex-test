@@ -2,11 +2,11 @@ import {PropsWithChildren} from "react";
 import {Navigate} from "react-router";
 
 type PrivateRouteProps = {
-    isAuthorized: boolean;
+    isSuccess: boolean;
 }
 
-const PrivateRoute = ({isAuthorized, children}: PropsWithChildren<PrivateRouteProps>) => {
-    return isAuthorized ? children : <Navigate to="/login" />;
+const PrivateRoute = ({isSuccess, children}: PropsWithChildren<PrivateRouteProps>) => {
+    return isSuccess ? children : <Navigate to="/contact-us" />;
 }
 
 export default PrivateRoute;

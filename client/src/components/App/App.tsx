@@ -4,7 +4,7 @@ import ContactForm from "../../pages/ContactForm/ContactForm.tsx";
 import PrivateRoute from "../PrivateRoute/PrivateRoute.tsx";
 import ContactSuccess from "../../pages/ContactSuccess/ContactSuccess.tsx";
 
-const isAuthorized = false;
+const isSuccess = false;
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
        <Route index path="/" element={<Main />}/>
        <Route path={"/contact-us"} element={<ContactForm />}/>
        <Route path={"/success-contact"} element={
-           <PrivateRoute isAuthorized={isAuthorized}>
+           <PrivateRoute isSuccess={isSuccess}>
                <ContactSuccess />
            </PrivateRoute>
        }>
