@@ -1,10 +1,9 @@
-import {StyledFooter} from "./StyledFooter.tsx";
-import {Link} from "react-router-dom";
+import {StyledFooter, StyledLink} from "./StyledFooter.tsx";
 
 const Footer = () => {
     return (
         <StyledFooter>
-            <Link to="/">Some Company 2024</Link>
+            <StyledLink to="/">Some Company 2024</StyledLink>
         </StyledFooter>
     )
 }

@@ -1,8 +1,18 @@
-const ProductsList = () => {
-    return (
-        <ul>
+import ProductCard from "../ProductCard/ProductCard.tsx";
+import {Content} from "../../types/Content.ts";
+import {StyledProductList} from "./StyledProductList.tsx";
 
-        </ul>
+export type ProductsListProps = {
+    content: Content[];
+}
+
+const ProductsList = ({content}: ProductsListProps) => {
+    return (
+        <StyledProductList>
+            {content.map((item) => (
+                <ProductCard key={item.id} title={item.title} text={item.text} />
+            ))}
+        </StyledProductList>
     )
 }
 

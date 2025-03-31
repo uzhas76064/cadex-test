@@ -1,12 +1,14 @@
 import {Button, Typography} from "antd";
-import ProductsList from "../ProductsList/ProductsList.tsx";
+import ProductsList, {ProductsListProps} from "../ProductsList/ProductsList.tsx";
 import {StyledProductsContainer} from "./StyledProductsContainer.tsx";
 
-const ProductsContainer = () => {
+type ProductsContainerProps = ProductsListProps;
+
+const ProductsContainer = ({content}: ProductsContainerProps) => {
     return (
         <StyledProductsContainer>
             <Typography.Title level={2}>Also very important title</Typography.Title>
-            <ProductsList/>
+            <ProductsList content={content} />
             <Button type={"primary"}>Contact Us</Button>
         </StyledProductsContainer>
     )

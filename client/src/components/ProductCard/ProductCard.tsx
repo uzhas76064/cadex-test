@@ -1,6 +1,17 @@
-const ProductCard = () => {
+import {Typography} from "antd";
+import {StyledProductCard} from "./StyledProductCard.tsx";
+
+type ProductCardProps = {
+    title: string,
+    text: string,
+}
+
+const ProductCard = ({title, text}: ProductCardProps) => {
     return (
-        <li></li>
+        <StyledProductCard>
+            <Typography.Title level={3}>{title}</Typography.Title>
+            <Typography.Text>{text}</Typography.Text>
+        </StyledProductCard>
     )
 }
 

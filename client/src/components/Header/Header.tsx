@@ -1,12 +1,11 @@
 import {JSX} from "react";
-import {Link} from "react-router-dom";
-import {StyledHeader} from "./StyledHeader.tsx";
+import {StyledHeader, StyledLink} from "./StyledHeader.tsx";
 import {Button} from "antd";
 
 export const Header = (): JSX.Element => {
     return (
         <StyledHeader>
-            <Link to="/">Some Company</Link>
+            <StyledLink to="/">Some Company</StyledLink>
             <Button type="primary">Contact Us</Button>
         </StyledHeader>
     )

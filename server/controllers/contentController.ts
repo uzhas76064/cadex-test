@@ -1,5 +1,5 @@
 import {Response, Request} from "express";
-import {products as data} from "../data/products";
+import {content as data} from "../data/content";
 
 export const getAllContent = (req: Request, res: Response) => {
     res.json(data)

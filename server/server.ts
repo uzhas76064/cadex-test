@@ -1,5 +1,5 @@
 import express from 'express';
-import contentRoutes from "./routes/productsRoutes"
+import contentRoutes from "./routes/contentRoutes"
 
 const app = express();
 app.use(express.json());

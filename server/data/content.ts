@@ -1,7 +1,7 @@
-import {Product} from "../types/Product";
+import {Content} from "../types/Content";
 import { v4 as uuidv4 } from 'uuid';
 
-export const products: Product[] = [
+export const content: Content[] = [
     {id: uuidv4(), title: 'Title 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum'},
     {id: uuidv4(), title: 'Title 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum'},
     {id: uuidv4(), title: 'Title 3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum'},
